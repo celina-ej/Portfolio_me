@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celina | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <p style="display: inline-block;">Celina Elizabeth Jacob<br><span style="font-size: medium;">Junior Developer</span></p>
+        <ul style="display:inline-block;">
+
+
+
+            <li><a href="#contact ">Contact </a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#experience ">Experience </a></li>
+            <li><a href="#achievments">Achievements</a></li>
+            <li><a href="#about">About </a></li>
+        </ul>
+
+    </header>
+
+    <main>
+        <div class="boxl">
+            <a name="about">
+            </a>
+            <h2>About Me</h2>
+            <p>Enthusiastic Junior Developer,eager to learn new skills and improve on my existing skills.Highly ambitious Btech Computer Science and Business Systems student who thrives working under pressure and enjoys singing and playing instruments.</p>
+            <p>This website serves as a platform that helps me understand how to bring into application the knowledge that i know. It also helps me challenge myself into bringing into the webpage what i have in my mind .</p>
+        </div>
+        <div class="lbox"><img class="images" src="about_me.jpeg"></div>
+        <div class="boxl">
+            <a name="achievments"></a>
+            <h2>Achievments</h2>
+            <p>
+                <ul>
+                    <li>Hackathon- Second Place</li>
+                    <br>The event consisted of 3 rounds <br>->First round - quiz round :Which contained questions on the basic concepts of OOP and general syntaxs of popular languages like Java and Python.
+                    <br><br>->Second round - the debugging round : Questions on merge sort were giving and we had to debug them to get to the answer
+                    <br><br>->Thrid round - competitive programming round : Competitive programming questions were given to solve on hacckerrank
+
+                </ul>
+            </p>
+        </div>
+        <div class="lbox"><img src="hackathon.avif" height="240px" width="240px" style="margin:5px"></div>
+        <div class="boxr">
+            <a name="experience"></a>
+            <h2>Work Experience</h2><b>NOTE: </b>click each project to know them in detail
+            <ul>
+                <li><a id="portfolio">Portfolio - HTML,CSS,JAVASCRIPT</a></li>
+                <div id="portdetails"></div>
+                <li><a id='ss'> STOCK-SAVVY - HTML,CSS,JAVASCRIPT,NODE JS,MYSQL</a></li>
+                <div id="ssdetails"></div>
+            </ul>
+        </div>
+        <div class="rbox" id='lang'>
+            <div style="padding: 45px;">
+                <ul>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>GIT</li>
+                    <li>NodeJS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+        <div class="boxl">
+            <a name="hobbies"></a>
+            <h2>Hobbies</h2>
+            <p>I have two primary interests apart from studying: music and sewing. <br>I enjoy playing the piano and singing and love trying different instruments.I also spend my stitching and embroidery for different patterns.
+            </p>
+        </div>
+        <div class="lbox"><img src="musical-notes.gif"></div>
+
+    </main>
+    <hr>
+    <footer>
+        <a name="contact"></a>
+        <h2 name="contact">Contact</h2>
+        <a href="jacobcelina20@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/celina-jacob/ ">Linkden</a>
+        <a href="https://github.com/celina-ej ">Github</a><br>
+        <center> &copy; Celina Elizabeth Jacob 2025</center>
+    </footer>
+    <script>
+        const portfoliolink = document.getElementById('portfolio');
+        const detailsdivid = 'portdetails';
+        portfoliolink.addEventListener('click', function(event) {
+            event.preventDefault();
+            console.log("Got into the function!")
+            const detailsdiv = document.getElementById(detailsdivid);
+            const someContent = `<h2>Portfolio Behind the Scenes</h2> 
+            <p> This page contains basics of HTML,CSS and JavaScript </p><br>
+            <div style = "display:flex; justify-content:space-evenly; align-items:start;flex-direction:row;" >
+            <div class = "boxr"  style = "background-color: #c8a19c; margin-right:0px; padding-right: 100px; padding-left: 100px; margin-left:5px ; border:2px" >
+            <p><h2> <u> 1) Keyframes </u></h2> <br> Keyframes help us add animations.It gives you more control over the animation you want to perform.The animation is created by gradually changing from one style to another <br> <br> Given below is the code used for animation
+            </p> <div class = "code">
+            <pre > @keyframes photos {
+                    from {
+                        background - color: #c8a19c;
+                    }
+                    to {
+                        background - color: #B2ABB3;
+                    }
+                } </pre> </div> 
+            <p><h3><u>Explanation</u></h3><br>it changes the colour from #c8a19c to #B2ABB3 in a gradient manner. <br > When we call the keyframe name in the class we mention the duration of the animation.The sytax is as follows: </p>
+            <div class = "code" >
+            <pre> animation: name duration timing - function delay iteration - count direction fill - mode;  </pre> </div > 
+            <br><h3> <u> The code: </u></h3><br><br>
+            <div class = "code"><pre>
+                .rbox {
+                    position: relative;
+                    width: 400 px;
+                    height: 250 px;
+                    background - color: #B2ABB3;
+                    margin - left: 780 px;
+                    bottom: 400 px;
+                    z - index: 2;
+                    animation - name: photos;
+                    animation - duration: 4 s;
+                    animation - iteration - count: infinite;
+                } </pre> </div ></div> </div></div>`
+            detailsdiv.innerHTML = someContent;
+            const toremove = document.getElementById('lang')
+            const parentnode = toremove.parentNode;
+            if (toremove) {
+                const parentnode = toremove.parentNode;
+                parentnode.removeChild(toremove);
+            }
+        });
+        const stocklink = document.getElementById('ss');
+        const detailsdivid1 = 'ssdetails';
+        stocklink.addEventListener('click', function(event) {
+            event.preventDefault();
+            console.log("Got into the function!")
+            const detailsdiv1 = document.getElementById(detailsdivid1);
+            const someContent1 = `<p>This is a project that aims at teaching beginners the basics of stock-marketting. It is mainly divided into two parts - 1 for the teaching the theory using quizzes and the other for providing an interaction with papertrading and get a little more
+        familiar with the charts and the analysis.</p><br>
+        <div style="display:flex; justify-content:space-evenly; align-items:start;flex-direction:row;">
+        <div class="boxr" style="background-color: #c8a19c; margin-right:0px; padding-right: 100px; padding-left: 100px; margin-left:5px ;">
+            <p><h2><u>Login page</u></h2><br>It starts of by running the server using express, importing the required libraries and creating a connection with the MYSQL server. It uses <u>.get() </u>to load the login page first and then <u>.post()</u></p>
+            <h4>The login code:</h4>
+            <div class="code">
+                <pre>app.post('/', (req, res) => {
+                    console.log("Got into post ?");
+                    console.log('Processing POST request');
+                    console.log(req.body);
+                    const query = insert into user(username, password, account, phoneno) values( ? , ? , ? , ? )
+                    const values = [req.body.username, req.body.password, req.body.account, req.body.phone]
+                    connection.query(query, values, (err, res) => {
+                    if (err) {
+                        console.log(err);
+                        res.end("101 Error. Kindly contact Admin")
+                        return;
+                    }
+                    console.log("Data inserted securely")
+                 })
+    });</pre></div>
+    <p><h3><u>Quiz</u></h3><br>We have divided it into 5 modules , and calculate the correct answers by comparing them to an array and updating the scores in the database.</p>
+    <div class="code">
+    <pre>app.post('/quiz1.html', (req, respond) => {
+    console.log("trying quiz");
+    console.log(req.body)
+    const answers2 = {
+        question1: 'a',
+        question2: 'c',
+        question3: 'b',
+        question4: 'c',
+        question5: 'd',
+        question6: 'd',
+        question7: 'b',
+        question8: 'a',
+        question9: 'a',
+        question10: 'a'
+    };
+    let mylist = [];
+    let sum = 0;
+    for (const question in req.body) {
+        if (req.body[question] === answers2[question]) {
+            sum++;
+        }
+    }
+    query = UPDATE courses SET course1 = $ {sum}WHERE phoneno = $ {req.session.phoneno};
+    connection.query(query, (err, res) => {
+        if (err) {
+            console.log("ERROR:\n", err);
+            respond.send('Please Contact administrator')
+            return;
+        } else {
+            console.log("data inserted");
+            respond.redirect('./Mod2.html')
+        }
+    }); });</pre></div><br>
+    <p>The last part , we have the paper trading, we use TradingView for collecting the chartered form of the data and we used websocket to collect the real time data for crytpocurrency</p>
+    <br><br>
+    <p>Code provided by trading view to connect for charts widgets </p>
+    <div class="code">
+    <pre> href="https://in.tradingview.com/symbols/ETHUSDT/?exchange=BINANCE" rel="noopener" target="_blank"
+        new TradingView.widget({
+            "width": 800,
+            "height": 900,
+            "symbol": "BINANCE:ETHUSDT",
+            "interval": "5",
+            "timezone": "Asia/Kolkata",
+            "theme": "dark",
+            "style": "1",
+            "locale": "in",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "studies": [
+                "TripleEMA@tv-basicstudies",
+                "MAVolumeWeighted@tv-basicstudies"
+            ],
+            "container_id": "tradingview_24c54"
+        }); < /pre></div>
+        <p> using the websocket object, we will get the real time data and after collecting the information of the user and responds as 'EXECUTED'
+        if the target value has reached the current value, 'PENDING'
+        if the value still hasnt reached, 'EXIT'
+        if we are no longer looking </p> </div>`;
+            detailsdiv1.innerHTML = someContent1;
+            const toremove = document.getElementById('lang')
+            if (toremove) {
+                const parentnode = toremove.parentNode;
+                parentnode.removeChild(toremove);
+            }
+        });
+    </script>
+</body>
+
+</html>

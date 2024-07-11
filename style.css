@@ -1,0 +1,127 @@
+header {
+    background-color: #c8a19c;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    line-height: 36px;
+    overflow-y: visible;
+}
+
+header ul {
+    margin-left: 65%;
+    padding: 0px 0px;
+    list-style: none;
+}
+
+header ul li {
+    font-size: small;
+    float: right;
+    padding: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+@keyframes photos {
+    from {
+        background-color: #c8a19c;
+    }
+    to {
+        background-color: #B2ABB3;
+    }
+}
+
+.boxl {
+    margin: 60px;
+    background-color: #B2ABB3;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px 50px 50px 100px;
+    margin-left: 600px;
+    margin-right: 80px;
+}
+
+.boxr {
+    width: 900px;
+    margin: 10px;
+    background-color: #B2ABB3;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px 0px 50px 100px;
+    margin-right: 600px;
+    margin-left: 80px;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+.lbox {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    background-color: #B2ABB3;
+    margin-left: 240px;
+    margin-bottom: 100px;
+    bottom: 200px;
+    z-index: 2;
+    animation-name: photos;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.rbox {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    background-color: #B2ABB3;
+    margin-left: 780px;
+    bottom: 400px;
+    z-index: 2;
+    animation-name: photos;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.images {
+    padding-left: 50px;
+    padding-top: 25px;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+}
+
+.code {
+    padding: 10px;
+    margin-left: 60px;
+    background-color: #eae0df;
+    overflow: scroll;
+    min-height: 100px;
+    min-width: 100px;
+    max-height: 400px;
+    max-width: 500px;
+}
+
+.workexp {
+    padding-left: 140px;
+    padding-top: 100px;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 10px;
+    animation: textAnimation 10s infinite;
+    font-family: monospace;
+}
+
+body {
+    background-color: #eae0df;
+}
+
+footer {
+    background-color: #c8a19c;
+    font-size: small;
+    padding: 10px;
+    font-family: monospace;
+    line-height: 36px;
+}

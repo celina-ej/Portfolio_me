@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Behind The Scenes</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header style="overflow-x: visible;">
+        <h2>Portfolio Behind the Scenes</h2>
+        <p>This page contains basics of HTML,CSS and JavaScript</p>
+    </header>
+    <br>
+    <div style="display:flex; justify-content:space-evenly; align-items:start;flex-direction:row;">
+        <div class="boxr" style="margin-right:0px; padding-right: 100px; padding-left: 100px; margin-left:5px ;">
+            <p>
+                <h2><u>Keyframes</u></h2><br>Keyframes help us add animations.It gives you more control over the animation you want to perform. The animation is created by gradually changing from one style to another<br><br>Given below is the code used for
+                animation
+            </p>
+            <div class="code">
+                <pre>@keyframes photos {
+    from {
+        background-color: #c8a19c;
+    }
+    to {
+        background-color: #B2ABB3;
+    }
+}</pre>
+            </div>
+            <p>
+                <h3><u>Explanation</u></h3><br>it changes the colour from #c8a19c to #B2ABB3 in a gradient manner. <br> When we call the keyframe name in the class we mention the duration of the animation. The sytax is as follows : </p>
+            <div class="code">
+                <pre>animation: name duration timing-function delay iteration-count direction fill-mode;</pre>
+            </div>
+            <br>
+            <h3><u>The code :</u></h3>
+            <br><br>
+            <div class="code"> <pre>
+            .rbox {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    background-color: #B2ABB3;
+    margin-left: 780px;
+    bottom: 400px;
+    z-index: 2;
+    animation-name: photos;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+        </pre>
+            </div>
+        </div>
+        <div class="boxr " style="margin-right:0px; padding-right: 100px; padding-left: 100px;">
+            <h2><u>addEventListener()</u></h2>
+            <div>is it a function in JavaScript that lets you respond to events associated with an element via an event handler function.<br>in this webpage as soon as the 'DOM content is loaded, it performs the following functions <br> 1.print the text letter
+                by letter <br> 2.erase the text letter by letter <br><br></div>p>
+            <h3><u>Syntax</u></h3>
+            <div class="code">
+                <pre>
+                    element.addEventListener(event, function, useCapture)
+                </pre>
+
+            </div>
+            <h3><u>The code :</u></h3>]
+            <div class="code">
+                <pre>
+                    const printText = () => {
+                textElement.textContent = textArray[wordIndex].slice(0, letterIndex + 1);
+                letterIndex++;
+                if (letterIndex === textArray[wordIndex].length) {
+                    clearInterval(intervalId);
+                    setTimeout(() => {
+                        intervalId = setInterval(eraseText, 100);
+                    }, 1000);
+                }
+            }
+
+            const eraseText = () => {
+                textElement.textContent = textArray[wordIndex].slice(0, letterIndex);
+                letterIndex--;
+                if (letterIndex === 0) {
+                    clearInterval(intervalId);
+                    wordIndex = (wordIndex + 1) % textArray.length;
+                    setTimeout(() => {
+                        intervalId = setInterval(printText, 100);
+                    }, 500);
+                }
+            }
+                </pre>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
